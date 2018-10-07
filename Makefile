@@ -9,7 +9,10 @@ docs.json:
 		| jq '.schemes += ["https"]' \
 		| jq '. + {"securityDefinitions": {"OAuth2": {"type": "oauth2", "flow": "password"}}}' \
 		| jq '. + {"security": [{"OAuth2": []}]}' \
+		| jq '.definitions += {"any": {"description": "Facade type which represents a variable of any type."}}' \
+		| jq '.definitions["framework-attribute-interface"].properties.value["$$ref"] = "#/definitions/any"' \
+		| jq 'del(.definitions["framework-attribute-interface"].properties.value.type)' \
 		> $@
 
 clean:
-	rm docs.json
+	rm -f docs.json

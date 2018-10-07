@@ -1,6 +1,6 @@
 <?php
 /**
- * FrameworkAttributeInterface
+ * Any
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Krak\MagentoApiClient\ObjectSerializer;
 
 /**
- * FrameworkAttributeInterface Class Doc Comment
+ * Any Class Doc Comment
  *
  * @category Class
- * @description Interface for custom attribute value.
+ * @description Facade type which represents a variable of any type.
  * @package  Krak\MagentoApiClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
+class Any implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'framework-attribute-interface';
+    protected static $swaggerModelName = 'any';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'attributeCode' => 'string',
-        'value' => '\Krak\MagentoApiClient\Model\Any'
+        
     ];
 
     /**
@@ -68,8 +67,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'attributeCode' => null,
-        'value' => null
+        
     ];
 
     /**
@@ -99,8 +97,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'attributeCode' => 'attribute_code',
-        'value' => 'value'
+        
     ];
 
     /**
@@ -109,8 +106,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'attributeCode' => 'setAttributeCode',
-        'value' => 'setValue'
+        
     ];
 
     /**
@@ -119,8 +115,7 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'attributeCode' => 'getAttributeCode',
-        'value' => 'getValue'
+        
     ];
 
     /**
@@ -183,8 +178,6 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['attributeCode'] = isset($data['attributeCode']) ? $data['attributeCode'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -196,12 +189,6 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['attributeCode'] === null) {
-            $invalidProperties[] = "'attributeCode' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -214,63 +201,9 @@ class FrameworkAttributeInterface implements ModelInterface, ArrayAccess
     public function valid()
     {
 
-        if ($this->container['attributeCode'] === null) {
-            return false;
-        }
-        if ($this->container['value'] === null) {
-            return false;
-        }
         return true;
     }
 
-
-    /**
-     * Gets attributeCode
-     *
-     * @return string
-     */
-    public function getAttributeCode()
-    {
-        return $this->container['attributeCode'];
-    }
-
-    /**
-     * Sets attributeCode
-     *
-     * @param string $attributeCode Attribute code
-     *
-     * @return $this
-     */
-    public function setAttributeCode($attributeCode)
-    {
-        $this->container['attributeCode'] = $attributeCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return \Krak\MagentoApiClient\Model\Any
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param \Krak\MagentoApiClient\Model\Any $value Attribute value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *
