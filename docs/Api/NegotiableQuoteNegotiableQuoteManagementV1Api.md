@@ -21,10 +21,14 @@ Submit the B2B quote to the customer. The quote status for the customer will be 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\NegotiableQuoteNegotiableQuoteManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $negotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody = new \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody(); // \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody | 
 
@@ -49,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -70,10 +74,14 @@ Create a B2B quote based on a regular Magento quote. If the B2B quote requires a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\NegotiableQuoteNegotiableQuoteManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $negotiableQuoteNegotiableQuoteManagementV1CreatePostBody = new \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1CreatePostBody(); // \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1CreatePostBody | 
 
@@ -98,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -119,10 +127,14 @@ Decline the B2B quote. All custom pricing will be removed from this quote. The b
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\NegotiableQuoteNegotiableQuoteManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody = new \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1DeclinePostBody(); // \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableQuoteManagementV1DeclinePostBody | 
 
@@ -147,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

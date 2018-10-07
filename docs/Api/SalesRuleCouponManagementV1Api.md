@@ -21,10 +21,14 @@ Delete coupon by coupon codes.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\SalesRuleCouponManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $salesRuleCouponManagementV1DeleteByCodesPostBody = new \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1DeleteByCodesPostBody(); // \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1DeleteByCodesPostBody | 
 
@@ -49,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -70,10 +74,14 @@ Delete coupon by coupon ids.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\SalesRuleCouponManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $salesRuleCouponManagementV1DeleteByIdsPostBody = new \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1DeleteByIdsPostBody(); // \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1DeleteByIdsPostBody | 
 
@@ -98,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -119,10 +127,14 @@ Generate coupon for a rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\SalesRuleCouponManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $salesRuleCouponManagementV1GeneratePostBody = new \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1GeneratePostBody(); // \Krak\MagentoApiClient\Model\SalesRuleCouponManagementV1GeneratePostBody | 
 
@@ -147,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

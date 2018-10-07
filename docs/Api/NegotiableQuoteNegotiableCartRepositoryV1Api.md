@@ -19,10 +19,14 @@ Save quote
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\NegotiableQuoteNegotiableCartRepositoryV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $quoteId = "quoteId_example"; // string | 
 $negotiableQuoteNegotiableCartRepositoryV1SavePutBody = new \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableCartRepositoryV1SavePutBody(); // \Krak\MagentoApiClient\Model\NegotiableQuoteNegotiableCartRepositoryV1SavePutBody | 
@@ -49,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

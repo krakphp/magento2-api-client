@@ -21,10 +21,14 @@ Delete product's special price. If any items will have invalid price, store id, 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogSpecialPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogSpecialPriceStorageV1DeletePostBody = new \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1DeletePostBody(); // \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1DeletePostBody | 
 
@@ -49,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -70,10 +74,14 @@ Return product's special price. In case of at least one of skus is not found exc
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogSpecialPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogSpecialPriceStorageV1GetPostBody = new \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1GetPostBody(); // \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1GetPostBody | 
 
@@ -98,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -119,10 +127,14 @@ Add or update product's special price. If any items will have invalid price, sto
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogSpecialPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogSpecialPriceStorageV1UpdatePostBody = new \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1UpdatePostBody(); // \Krak\MagentoApiClient\Model\CatalogSpecialPriceStorageV1UpdatePostBody | 
 
@@ -147,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

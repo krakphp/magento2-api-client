@@ -20,10 +20,14 @@ Decreases the company credit with an Update, Reimburse, or Purchase transaction.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CompanyCreditCreditBalanceManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $creditId = 56; // int | 
 $companyCreditCreditBalanceManagementV1DecreasePostBody = new \Krak\MagentoApiClient\Model\CompanyCreditCreditBalanceManagementV1DecreasePostBody(); // \Krak\MagentoApiClient\Model\CompanyCreditCreditBalanceManagementV1DecreasePostBody | 
@@ -50,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -71,10 +75,14 @@ Increases the company credit with an Allocate, Update, Refund, Revert, or Reimbu
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CompanyCreditCreditBalanceManagementV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $creditId = 56; // int | 
 $companyCreditCreditBalanceManagementV1IncreasePostBody = new \Krak\MagentoApiClient\Model\CompanyCreditCreditBalanceManagementV1IncreasePostBody(); // \Krak\MagentoApiClient\Model\CompanyCreditCreditBalanceManagementV1IncreasePostBody | 
@@ -101,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

@@ -20,10 +20,14 @@ Return product prices. In case of at least one of skus is not found exception wi
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogBasePriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogBasePriceStorageV1GetPostBody = new \Krak\MagentoApiClient\Model\CatalogBasePriceStorageV1GetPostBody(); // \Krak\MagentoApiClient\Model\CatalogBasePriceStorageV1GetPostBody | 
 
@@ -48,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -69,10 +73,14 @@ Add or update product prices. Input item should correspond \\Magento\\Catalog\\A
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogBasePriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogBasePriceStorageV1UpdatePostBody = new \Krak\MagentoApiClient\Model\CatalogBasePriceStorageV1UpdatePostBody(); // \Krak\MagentoApiClient\Model\CatalogBasePriceStorageV1UpdatePostBody | 
 
@@ -97,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

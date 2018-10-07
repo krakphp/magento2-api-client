@@ -22,10 +22,14 @@ Delete product tier prices. If any items will have invalid price, price type, we
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogTierPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogTierPriceStorageV1DeletePostBody = new \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1DeletePostBody(); // \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1DeletePostBody | 
 
@@ -50,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -71,10 +75,14 @@ Return product prices. In case of at least one of skus is not found exception wi
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogTierPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogTierPriceStorageV1GetPostBody = new \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1GetPostBody(); // \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1GetPostBody | 
 
@@ -99,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -120,10 +128,14 @@ Remove existing tier prices and replace them with the new ones. If any items wil
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogTierPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogTierPriceStorageV1ReplacePutBody = new \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1ReplacePutBody(); // \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1ReplacePutBody | 
 
@@ -148,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -169,10 +181,14 @@ Add or update product prices. If any items will have invalid price, price type, 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\CatalogTierPriceStorageV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $catalogTierPriceStorageV1UpdatePostBody = new \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1UpdatePostBody(); // \Krak\MagentoApiClient\Model\CatalogTierPriceStorageV1UpdatePostBody | 
 
@@ -197,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

@@ -19,10 +19,14 @@ Performs persist operations for a specified entity.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\SalesCreditmemoCommentRepositoryV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $salesCreditmemoCommentRepositoryV1SavePostBody = new \Krak\MagentoApiClient\Model\SalesCreditmemoCommentRepositoryV1SavePostBody(); // \Krak\MagentoApiClient\Model\SalesCreditmemoCommentRepositoryV1SavePostBody | 
@@ -49,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

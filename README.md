@@ -57,10 +57,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Krak\MagentoApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Krak\MagentoApiClient\Api\AnalyticsLinkProviderV1Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -1073,7 +1077,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## OAuth2
+
+- **Type**: OAuth
+- **Flow**: password
+- **Authorization URL**: 
+- **Scopes**: N/A
 
 
 ## Author
@@ -1085,4 +1095,7 @@ Class | Method | HTTP request | Description
 
 To build this library, run `make codegen`.
 
-This requires that the `swagger-codegen` binary at version 2.3.1 is installed globally on your system.
+This requires that the following:
+
+- `swagger-codegen` binary at version 2.3.1 is installed globally on your system.
+- `jq` version 1.5 is installed globally.
