@@ -1,0 +1,7 @@
+{
+    "composerVendorName": "krak",
+    "composerProjectName": "magento2-api-client",
+    "variableNamingConvention": "camelCase",
+    "invokerPackage": "Krak\\MagentoApiClient",
+    "packagePath": "."
+}
